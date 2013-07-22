@@ -1,0 +1,11 @@
+<!-- form for the @folder which is Folder.new in the new method in Controller  -->
+<%= form_for @folder do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>    
+  <br>
+  <%= f.label :description %>
+  <%= f.text_field :description %>    
+  <br>
+  <%= f.submit nil, {:class => 'button'} %>
+<% end %>
+<%= link_to "<< Back", :back %>  

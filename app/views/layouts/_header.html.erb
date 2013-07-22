@@ -1,0 +1,15 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "HipLink", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to 'All Folders', folders_path %></li>   
+          <li><%= link_to 'All Links', links_path %></li>                  
+          <li><%= link_to 'New Folder', new_folder_path %></li>
+          <li><%= link_to 'New Link', new_link_path %></li>   
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

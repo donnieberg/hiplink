@@ -1,0 +1,20 @@
+<!-- form for the @link which is Link.new in the new method in Controller  -->
+<%= form_for @link do |f| %>
+    <%= f.label :folder_id %>
+    <%= f.select :folder_id, Folder.where(soft_deleted: false).map { |folder| [folder.name, folder.id]}, :include_blank => true, :prompt => "Pick Folder" %>
+    <br> 
+    <%= f.label :date %>      
+    <%= f.text_field :date , value: Date.today %> 
+    <br>
+    <%= f.label :from %>    
+    <%= f.text_field :from %>
+    <br>
+    <%= f.label :link_url %>    
+    <%= f.text_field :link_url %>
+    <br>
+    <%= f.label :tag_list %>  
+    <%= f.text_field :tag_list %>
+    <br>   
+    <%= f.submit nil, { :class => 'button' }  %>
+<% end %>
+<%= link_to "<< Back", :back %>  

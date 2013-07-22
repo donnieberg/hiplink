@@ -1,0 +1,71 @@
+<div class="show">
+  <h1><%= @folder.name.capitalize %> Folder Links</h1>
+  <h2><%= @folder.description %></h2>
+  <div style="text-align:center;">
+  <%= link_to 'Edit Folder', edit_folder_path %>  |  
+  <%= link_to 'Delete Folder', folder_path(@folder.id), :method => :delete, :confirm => 'Are you sure?' %>    
+  </div>
+  <% if !@split_tag_array.nil? %>   
+      <!-- FILTER CONTROLS -->   
+      <div class="btn-group filter_dropdown"> 
+        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+        Filter by Meta-Tag
+        <span class="caret"></span>
+        </a> 
+        <ul class="dropdown-menu">
+        <li class="filter active" data-filter="all"><a href="#">View All</a></li>  
+        <% @split_tag_array.uniq.each do |split_tag| %>
+          <li class="filter" data-filter="<%= split_tag -%>">
+            <a href="#"><%= split_tag %></a>
+          </li>
+        <% end %>
+        </ul>
+      </div>
+      
+      <!-- SORT CONTROLS -->
+        
+      <div class="controls">
+        <ul class="sort_menu">
+          <li class="sort" data-sort="data-date" data-order="asc"><a href="#">Newest to Oldest | </a></li>    
+          <li class="sort" data-sort="data-date" data-order="desc"><a href="#">Oldest to Newest</a></li>
+        </ul>
+      </div>
+      <hr/>
+
+
+    <!-- GRID -->
+    <ul id="Grid">
+    <% @folder.links.each do |link| %>
+    <% class_tags = link.tags.map { |t| t[:name].split(" ") }.flatten %>
+      <li class="mix <%= class_tags.join(" ") %>" data-date="<%= link.date %>">
+        <div class="link_container">
+      <div class="link_thumbnail">
+        <img src='http://api.pagepeeker.com/v2/thumbs.php?size=m&code=59b97c1f70&url=<%= link.link_url -%>'>
+      </div>
+          <div class="link_details">            
+          <p><span class="link_label">Posted by:</span> <%= link.from %><br>  
+            <span class="link_label">Date posted:</span> <%= link.date %><br>               
+            <span class="link_label">Link:</span> <%= link_to link.link_url, link.link_url %><br> 
+          <% if !link.tags.empty? %>                  
+           <ul class="tags_list">
+              <li><span class="link_label">Tags:</span></li>          
+                <% link.tags.each do |tag| %>
+                <% @class_tags = tag %>
+                  <% tag_array = tag[:name].split(" ") %>
+                  <% tag_array.each do |tag_item| %>
+                    <li class="<%= tag_item %>"><%= tag_item %></li>
+                  <% end %>
+                <% end %>
+            </ul>  
+          <% end %>  
+          </p>
+          <%= link_to 'Edit Link', edit_link_path(link.id), :method => :get %>  |   
+          <%= link_to 'Delete Link', link_path(link.id), :method => :delete %>           
+          </div>
+        </div>
+      </li>
+    <% end %>
+    </ul>
+    <% end %>
+</div>
+<%= link_to "<< Back", :back %>   
