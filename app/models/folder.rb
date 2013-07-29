@@ -25,8 +25,6 @@ class Folder < ActiveRecord::Base
       message_array = message.split(" ")
       message_hash = {}
       message_hash['underscore'] = message_array[0][1..-1]
-      message_hash['link_url'] = message_array[1]
-      message_hash['tags'] = message_array[2..-1]
       post['message'] = message_hash
     end
     return all_postings

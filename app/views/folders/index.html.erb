@@ -7,7 +7,7 @@
       <i class="icon-angle-right icon-2x"></i>
       <i class="icon-folder-close-alt icon-4x"></i>
       <span class="folder_header"><a href="#<%= folder.name -%>"><%= folder.name %></a></span>
-      <span style="float:right;"><%= link_to 'Filter Links by Tags', folder %></span>
+      <span style="float:right;"><%= link_to 'View Folder', folder %></span>
 
     <div class ="folder_content">
         <ul>
@@ -17,8 +17,14 @@
             <div class="link_thumbnail">
               <img src='http://api.pagepeeker.com/v2/thumbs.php?size=m&code=59b97c1f70&url=<%= link.link_url -%>'>
             </div>
-              <div class="link_details">            
-              <p><span class="link_label">Posted by:</span> <%= link.from %><br>  
+              <div class="link_details"> 
+              <div class="edit_delete_links">
+                <%= link_to 'Edit Link', edit_link_path(link.id), :method => :get %>   |   
+                <%= link_to 'Delete Link', link_path(link.id), :method => :delete, :confirm => 'Are you sure?' %> 
+              </div>                          
+              <p>
+                <span class="link_label">Folder:</span> <%= link.folder %><br> 
+                <span class="link_label">Posted by:</span> <%= link.from %><br>  
                 <span class="link_label">Date posted:</span> <%= link.date %><br>               
                 <span class="link_label">Link:</span> <%= link_to link.link_url, link.link_url %><br> 
               <% if !link.tags.empty? %>                  
@@ -33,9 +39,7 @@
                     <% end %>
                 </ul>  
               <% end %>  
-              </p>
-              <%= link_to 'Edit Link', edit_link_path(link.id), :method => :get %>  |   
-              <%= link_to 'Delete Link', link_path(link.id), :method => :delete, :confirm => 'Are you sure?' %>           
+              </p>         
               </div>
             </div>
           </li>
@@ -45,17 +49,4 @@
 </div>   
 <% end %>
 <% end %>
-
-
-<script>
-  $(".folder_header").click(function () {
-    var $folder_content = $(this).parent('.folder_container').children('.folder_content');     
-    if ($folder_content.is(":hidden")) {
-      $folder_content.slideDown("slow");
-    } else {
-      $folder_content.slideUp("slow");
-    }
-  }); 
-</script>
-
 
