@@ -1,11 +1,10 @@
 class FoldersController < ApplicationController
   
-  def index
-    # links = Link.where soft_deleted: false  
-    # @links = links.sort!.reverse { |a, b| a.date <=> b.date }    
-    # Link.create_links! 
-    @folders = Folder.where soft_deleted: false
+  def index  
+    @folders = Folder.where(soft_deleted: false).sort! { |a, b| a.name <=> b.name }  
     Folder.create_folders!
+    @links = Link.where soft_deleted: false  
+    Link.create_links!      
   end
 
   def new
@@ -15,7 +14,7 @@ class FoldersController < ApplicationController
   def create #creates folder manually vs create method in Folder class which pulls hashtag name
     @folder = Folder.new(params[:folder])
     if @folder.save
-      flash[:notice] = "Folder successfully created. Folder only appears if it contains links; go to New Link now."
+      flash[:success] = "Folder successfully created. It only appears if it contains links."
       redirect_to '/folders'
     else
       flash[:error] = "Error, please try creating a folder again."   
@@ -43,7 +42,7 @@ class FoldersController < ApplicationController
   
     if @updated_folder
       flash[:success] = "Folder successfully updated."      
-      render :show 
+      redirect_to '/folders' 
     else
       flash[:error] = "Error, please try editing folder again."        
       render :new      
@@ -55,7 +54,8 @@ class FoldersController < ApplicationController
     @folder.update_attribute(:soft_deleted, true ) 
     @folder.links.each do |link|
       link.update_attribute(:soft_deleted, true)
-    end   
+    end  
+    flash[:success] = "Folder was deleted."  
     redirect_to '/folders'
   end
 end

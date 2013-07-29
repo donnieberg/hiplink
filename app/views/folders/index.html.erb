@@ -1,9 +1,9 @@
 <h1>All Folders</h1>
 
 <% @folders.each do |folder| %>
+<% @links %>
 <% if !folder.links.empty? %> 
 <div class="folder_container">
-
       <i class="icon-angle-right icon-2x"></i>
       <i class="icon-folder-close-alt icon-4x"></i>
       <span class="folder_header"><a href="#<%= folder.name -%>"><%= folder.name %></a></span>

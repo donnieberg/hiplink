@@ -1,7 +1,9 @@
 class LinksController < ApplicationController
   def index
-    links = Link.where soft_deleted: false  
-    @links = links.sort!.reverse { |a, b| a.date <=> b.date }    
+    @folders = Folder.where soft_deleted: false
+    Folder.create_folders!
+
+    @links = Link.where(soft_deleted: false).sort!.reverse { |a, b| a.date <=> b.date } 
     Link.create_links!     
     @split_tag_array = []
     @links.map(&:tags).flatten.uniq.each do |full_tag|
@@ -18,8 +20,8 @@ class LinksController < ApplicationController
   def create
     @link = Link.new(params[:link])
     if @link.save
-      flash[:notice] = "Link successfully created."      
-      render :show 
+      flash[:success] = "Link successfully created."      
+      redirect_to '/links'
     else
       flash[:error] = "Error, please try creating link again."       
       render :new      
@@ -38,7 +40,7 @@ class LinksController < ApplicationController
     @link = Link.find(params[:id])
     @updated_link = @link.update_attributes(params[:link])
     if @updated_link
-      flash[:notice] = "Link successfully updated."        
+      flash[:success] = "Link successfully updated."        
       render :show 
     else
       flash[:error] = "Error, please try editing link again."         
@@ -48,7 +50,8 @@ class LinksController < ApplicationController
 
   def destroy
     link = Link.find(params[:id])
-    link.update_attribute(:soft_deleted, true)     
+    link.update_attribute(:soft_deleted, true)  
+    flash[:success] = "Link was deleted."    
     redirect_to '/links'
   end
 end
