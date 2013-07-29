@@ -32231,3 +32231,536 @@ Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-28 20:57:14 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2013-07-28 21:01:41 -0700
+Processing by LinksController#index as HTML
+  [1m[35mFolder Load (0.2ms)[0m  SELECT "folders".* FROM "folders" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFolder Exists (0.2ms)[0m  SELECT 1 AS one FROM "folders" WHERE LOWER("folders"."name") = LOWER('sanFrancisco') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" WHERE "links"."soft_deleted" = 'f'
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 3 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  Rendered links/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 1446ms (Views: 26.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 21:01:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-28 21:01:43 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 21:01:43 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-28 21:01:43 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 21:01:43 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 21:01:43 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:01:43 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 21:01:43 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 21:01:43 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-28 21:01:43 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:01:43 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2013-07-28 21:02:12 -0700
+Processing by LinksController#index as HTML
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT "folders".* FROM "folders" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFolder Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "folders" WHERE LOWER("folders"."name") = LOWER('sanFrancisco') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFolder Exists (0.2ms)[0m  SELECT 1 AS one FROM "folders" WHERE LOWER("folders"."name") = LOWER('rails') LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "folders" ("created_at", "description", "name", "soft_deleted", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Mon, 29 Jul 2013 04:02:13 UTC +00:00], ["description", "new folder"], ["name", "rails"], ["soft_deleted", false], ["updated_at", Mon, 29 Jul 2013 04:02:13 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" WHERE "links"."soft_deleted" = 'f'[0m
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" 
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT "folders".* FROM "folders" WHERE "folders"."name" = 'rails' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" IS NULL AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "links" ("created_at", "date", "folder_id", "from", "link_url", "soft_deleted", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 29 Jul 2013 04:02:13 UTC +00:00], ["date", Sun, 28 Jul 2013], ["folder_id", 3], ["from", "Donielle Berg"], ["link_url", "http://ruby.railstutorial.org/chapters/sign-in-sign-out#top"], ["soft_deleted", false], ["updated_at", Mon, 29 Jul 2013 04:02:13 UTC +00:00]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'tutorial')[0m
+  [1m[35mActsAsTaggableOn::Tag Exists (0.1ms)[0m  SELECT 1 AS one FROM "tags" WHERE "tags"."name" = 'tutorial' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags" ("name") VALUES (?)[0m  [["name", "tutorial"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tagging Exists (1.7ms)[0m  [1mSELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 3 AND "taggings"."taggable_type" = 'Link' AND "taggings"."taggable_id" = 4 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES (?, ?, ?, ?, ?, ?, ?)  [["context", "tags"], ["created_at", Mon, 29 Jul 2013 04:02:13 UTC +00:00], ["tag_id", 3], ["taggable_id", 4], ["taggable_type", "Link"], ["tagger_id", nil], ["tagger_type", nil]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 3 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  Rendered links/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 993ms (Views: 31.0ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-28 21:02:13 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:13 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 21:02:13 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:13 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-28 21:02:13 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:14 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:14 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:14 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:14 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:14 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:14 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2013-07-28 21:02:18 -0700
+Processing by FoldersController#index as HTML
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT "folders".* FROM "folders" WHERE "folders"."soft_deleted" = 'f'[0m
+  [1m[35mFolder Load (0.1ms)[0m  SELECT "folders".* FROM "folders" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFolder Exists (0.2ms)[0m  SELECT 1 AS one FROM "folders" WHERE LOWER("folders"."name") = LOWER('sanFrancisco') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 3[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" WHERE "links"."folder_id" = 3
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 1[0m
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" WHERE "links"."folder_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 2[0m
+  [1m[35mLink Load (0.1ms)[0m  SELECT "links".* FROM "links" WHERE "links"."folder_id" = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 3 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 3 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  Rendered folders/index.html.erb within layouts/application (22.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 978ms (Views: 43.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-28 21:02:19 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-28 21:02:19 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:19 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:19 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 21:02:19 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:19 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:19 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:19 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:19 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:19 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2013-07-28 21:02:23 -0700
+Processing by LinksController#index as HTML
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFolder Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "folders" WHERE LOWER("folders"."name") = LOWER('sanFrancisco') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" WHERE "links"."soft_deleted" = 'f'[0m
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" 
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 3 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  Rendered links/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_flash_messages.html.erb (0.2ms)
+Completed 200 OK in 1101ms (Views: 35.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-28 21:02:24 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 21:02:24 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:24 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-28 21:02:24 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:24 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:24 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:24 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:24 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:24 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:24 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:24 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-28 21:02:34 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 21:02:34 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:34 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-28 21:02:34 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-28 21:02:34 -0700
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:34 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:34 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:34 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:34 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-28 21:02:34 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2013-07-28 21:03:19 -0700
+Processing by FoldersController#index as HTML
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT "folders".* FROM "folders" WHERE "folders"."soft_deleted" = 'f'[0m
+  [1m[35mFolder Load (0.1ms)[0m  SELECT "folders".* FROM "folders" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFolder Exists (0.2ms)[0m  SELECT 1 AS one FROM "folders" WHERE LOWER("folders"."name") = LOWER('sanFrancisco') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" 
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT "folders".* FROM "folders" WHERE "folders"."name" = 'wisconsin' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" IS NULL AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "links" ("created_at", "date", "folder_id", "from", "link_url", "soft_deleted", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 29 Jul 2013 04:03:20 UTC +00:00], ["date", Sun, 28 Jul 2013], ["folder_id", 2], ["from", "Donielle Berg"], ["link_url", "http://www.uwbadgers.com/"], ["soft_deleted", false], ["updated_at", Mon, 29 Jul 2013 04:03:20 UTC +00:00]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'events' OR lower(name) = 'sports')[0m
+  [1m[35mActsAsTaggableOn::Tag Exists (0.1ms)[0m  SELECT 1 AS one FROM "tags" WHERE "tags"."name" = 'sports' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags" ("name") VALUES (?)[0m  [["name", "sports"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 5 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 1 AND "taggings"."taggable_type" = 'Link' AND "taggings"."taggable_id" = 5 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES (?, ?, ?, ?, ?, ?, ?)  [["context", "tags"], ["created_at", Mon, 29 Jul 2013 04:03:20 UTC +00:00], ["tag_id", 1], ["taggable_id", 5], ["taggable_type", "Link"], ["tagger_id", nil], ["tagger_type", nil]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 4 AND "taggings"."taggable_type" = 'Link' AND "taggings"."taggable_id" = 5 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES (?, ?, ?, ?, ?, ?, ?)  [["context", "tags"], ["created_at", Mon, 29 Jul 2013 04:03:20 UTC +00:00], ["tag_id", 4], ["taggable_id", 5], ["taggable_type", "Link"], ["tagger_id", nil], ["tagger_type", nil]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 3
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" WHERE "links"."folder_id" = 3[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 1
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" WHERE "links"."folder_id" = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 2
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" WHERE "links"."folder_id" = 2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 3 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 3 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 5 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 5 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  Rendered folders/index.html.erb within layouts/application (22.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 1296ms (Views: 42.0ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-28 21:03:21 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-28 21:03:21 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:21 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:21 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:21 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 21:03:21 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:21 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:21 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:21 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:21 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-07-28 21:03:21 -0700
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2013-07-28 21:03:26 -0700
+Processing by LinksController#index as HTML
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" 
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFolder Exists (0.3ms)[0m  SELECT 1 AS one FROM "folders" WHERE LOWER("folders"."name") = LOWER('sanFrancisco') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" WHERE "links"."soft_deleted" = 'f'
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 5 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 3 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  Rendered links/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 954ms (Views: 30.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-28 21:03:27 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-28 21:03:27 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:27 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 21:03:27 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:27 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:27 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:27 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:27 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:27 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-28 21:03:36 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 21:03:36 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-28 21:03:36 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:36 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:36 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-28 21:03:36 -0700
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:36 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:36 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:36 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:36 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-28 21:03:36 -0700
+Served asset /application.js - 304 Not Modified (0ms)
