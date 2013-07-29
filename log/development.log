@@ -17404,3 +17404,1050 @@ Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-20 17:01:12 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-25 22:41:45 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 320ms (Views: 318.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-25 22:41:46 -0700
+Served asset /custom.css - 200 OK (49ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:46 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-25 22:41:46 -0700
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:46 -0700
+Served asset /custom.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:46 -0700
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:46 -0700
+Served asset /application.js - 200 OK (14ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:46 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:46 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:46 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 22:41:46 -0700
+Served asset /font-awesome.css - 304 Not Modified (3ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2013-07-25 22:41:52 -0700
+Processing by FoldersController#index as HTML
+  [1m[36mFolder Load (15.0ms)[0m  [1mSELECT "folders".* FROM "folders" [0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" WHERE "folders"."soft_deleted" = 'f'
+  [1m[36m (14.4ms)[0m  [1mSELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 1[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" WHERE "links"."folder_id" = 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 5 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 5 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 7 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 7 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 8 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 8 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 10 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 10 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 11 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 11 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 12 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 12 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 13 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 13 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 18 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 18 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 23 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 23 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 26 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 26 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 27 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 27 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 29 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 29 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 30 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 30 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 32 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 32 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 33 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 33 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 2[0m
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" WHERE "links"."folder_id" = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 17 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 24 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 3[0m
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" WHERE "links"."folder_id" = 3
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 3 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 9 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 9 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 19 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 19 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 20 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 21 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 25 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 31 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 31 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 4[0m
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" WHERE "links"."folder_id" = 4
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 6 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 6 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 14 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 14 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 15 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 15 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 22 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 22 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 28 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 28 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  Rendered folders/index.html.erb within layouts/application (410.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 1108ms (Views: 423.1ms | ActiveRecord: 47.4ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 22:41:53 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:53 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:53 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:53 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:53 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:53 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 22:41:53 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-07-25 22:41:53 -0700
+Served asset /fontawesome-webfont.woff - 304 Not Modified (20ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2013-07-25 22:42:10 -0700
+Processing by LinksController#index as HTML
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" WHERE "links"."soft_deleted" = 'f'[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" 
+  [1m[36mFolder Load (5.3ms)[0m  [1mSELECT "folders".* FROM "folders" WHERE "folders"."name" = 'rails' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" IS NULL AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (76.8ms)[0m  INSERT INTO "links" ("created_at", "date", "folder_id", "from", "link_url", "soft_deleted", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 26 Jul 2013 05:42:10 UTC +00:00], ["date", Sun, 21 Jul 2013], ["folder_id", 4], ["from", "Donielle Berg"], ["link_url", "https://onemonthrails.com/lectures/adding-users-with-devise-new"], ["soft_deleted", false], ["updated_at", Fri, 26 Jul 2013 05:42:10 UTC +00:00]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'tutorial')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 34 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 5 AND "taggings"."taggable_type" = 'Link' AND "taggings"."taggable_id" = 34 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (17.8ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES (?, ?, ?, ?, ?, ?, ?)  [["context", "tags"], ["created_at", Fri, 26 Jul 2013 05:42:10 UTC +00:00], ["tag_id", 5], ["taggable_id", 34], ["taggable_type", "Link"], ["tagger_id", nil], ["tagger_type", nil]]
+  [1m[36m (21.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT "folders".* FROM "folders" WHERE "folders"."name" = 'rails' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" IS NULL AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "links" ("created_at", "date", "folder_id", "from", "link_url", "soft_deleted", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 26 Jul 2013 05:42:11 UTC +00:00], ["date", Sun, 21 Jul 2013], ["folder_id", 4], ["from", "Donielle Berg"], ["link_url", "https://rubygems.org/gems/lambda-calculus"], ["soft_deleted", false], ["updated_at", Fri, 26 Jul 2013 05:42:11 UTC +00:00]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 35 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" WHERE "folders"."name" = 'rails' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" IS NULL AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "links" ("created_at", "date", "folder_id", "from", "link_url", "soft_deleted", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 26 Jul 2013 05:42:11 UTC +00:00], ["date", Sun, 21 Jul 2013], ["folder_id", 4], ["from", "Donielle Berg"], ["link_url", "https://github.com/mbleigh/acts-as-taggable-on"], ["soft_deleted", false], ["updated_at", Fri, 26 Jul 2013 05:42:11 UTC +00:00]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" WHERE (lower(name) = 'gem')
+  [1m[36mActsAsTaggableOn::Tag Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "tags" WHERE "tags"."name" = 'gem' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("name") VALUES (?)  [["name", "gem"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 36 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tagging Exists (0.1ms)[0m  SELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 9 AND "taggings"."taggable_type" = 'Link' AND "taggings"."taggable_id" = 36 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["context", "tags"], ["created_at", Fri, 26 Jul 2013 05:42:11 UTC +00:00], ["tag_id", 9], ["taggable_id", 36], ["taggable_type", "Link"], ["tagger_id", nil], ["tagger_type", nil]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" WHERE "folders"."name" = 'css' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" IS NULL AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "links" ("created_at", "date", "folder_id", "from", "link_url", "soft_deleted", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 26 Jul 2013 05:42:11 UTC +00:00], ["date", Mon, 22 Jul 2013], ["folder_id", 3], ["from", "Donielle Berg"], ["link_url", "http://coding.smashingmagazine.com/2009/09/02/backgrounds-in-css-everything-you-need-to-know/"], ["soft_deleted", false], ["updated_at", Fri, 26 Jul 2013 05:42:11 UTC +00:00]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (lower(name) = 'tutorial' OR lower(name) = 'blogs')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 37 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 5 AND "taggings"."taggable_type" = 'Link' AND "taggings"."taggable_id" = 37 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES (?, ?, ?, ?, ?, ?, ?)  [["context", "tags"], ["created_at", Fri, 26 Jul 2013 05:42:11 UTC +00:00], ["tag_id", 5], ["taggable_id", 37], ["taggable_type", "Link"], ["tagger_id", nil], ["tagger_type", nil]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 1 AND "taggings"."taggable_type" = 'Link' AND "taggings"."taggable_id" = 37 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("context", "created_at", "tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type") VALUES (?, ?, ?, ?, ?, ?, ?)  [["context", "tags"], ["created_at", Fri, 26 Jul 2013 05:42:11 UTC +00:00], ["tag_id", 1], ["taggable_id", 37], ["taggable_type", "Link"], ["tagger_id", nil], ["tagger_type", nil]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT "folders".* FROM "folders" WHERE "folders"."name" = 'homework' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" IS NULL AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "links" ("created_at", "date", "folder_id", "from", "link_url", "soft_deleted", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 26 Jul 2013 05:42:11 UTC +00:00], ["date", Mon, 22 Jul 2013], ["folder_id", 2], ["from", "Donielle Berg"], ["link_url", "https://github.com/aikalima/wdi_cook_book_auth_final"], ["soft_deleted", false], ["updated_at", Fri, 26 Jul 2013 05:42:11 UTC +00:00]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 38 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 32 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 31 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 29 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 28 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 25 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 23 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 22 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 21 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 20 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 19 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 18 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 17 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 15 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 14 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 13 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 12 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 11 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 8 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 7 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 5 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  Rendered links/index.html.erb within layouts/application (66.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 1131ms (Views: 106.7ms | ActiveRecord: 140.6ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 22:42:11 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:11 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:11 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:11 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:11 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:11 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2013-07-25 22:42:34 -0700
+Processing by FoldersController#new as HTML
+  Rendered folders/_form.html.erb (3.4ms)
+  Rendered folders/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 22:42:34 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:34 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:34 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:34 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:34 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:34 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:34 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/links/new" for 127.0.0.1 at 2013-07-25 22:42:37 -0700
+Processing by LinksController#new as HTML
+  [1m[35mFolder Load (0.5ms)[0m  SELECT "folders".* FROM "folders" WHERE "folders"."soft_deleted" = 'f'
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" IS NULL AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  Rendered links/_form.html.erb (9.6ms)
+  Rendered links/new.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 22:42:37 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:37 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:37 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:37 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:37 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:37 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:37 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:37 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:37 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-25 22:42:41 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 22:42:41 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:41 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:41 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:41 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:41 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:41 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:41 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:41 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2013-07-25 22:42:42 -0700
+Processing by LinksController#index as HTML
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links" WHERE "links"."soft_deleted" = 'f'
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" [0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 38 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 37 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 36 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 35 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 34 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 32 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 31 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 29 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 28 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 25 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 23 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 22 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 21 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 20 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 19 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 18 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 17 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 15 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 14 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 13 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 12 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 11 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 8 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 7 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 5 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  Rendered links/index.html.erb within layouts/application (22.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 957ms (Views: 46.1ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 22:42:43 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:43 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:43 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:43 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:43 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:43 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:43 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:43 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2013-07-25 22:42:55 -0700
+Processing by FoldersController#index as HTML
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT "folders".* FROM "folders" [0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT "folders".* FROM "folders" WHERE "folders"."soft_deleted" = 'f'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 1[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" WHERE "links"."folder_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.6ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 5 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 5 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 7 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 7 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 8 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 8 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 10 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 10 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 11 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 11 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 12 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 12 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 13 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 13 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 18 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 18 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 23 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 23 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 26 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 26 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 27 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (1.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 27 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 29 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 29 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 30 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 30 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 32 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 32 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 33 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 33 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 2[0m
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" WHERE "links"."folder_id" = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 17 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 24 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 38 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 3
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" WHERE "links"."folder_id" = 3[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 3 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 9 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 9 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 19 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 19 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 20 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 21 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 25 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 31 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 31 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 37 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 37 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 4
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT "links".* FROM "links" WHERE "links"."folder_id" = 4[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 6 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 6 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 14 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 14 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 15 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 15 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 22 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 22 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 28 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 28 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 34 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 34 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 35 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 36 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 36 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  Rendered folders/index.html.erb within layouts/application (200.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 679ms (Views: 211.4ms | ActiveRecord: 16.6ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:56 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:56 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:56 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:56 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:56 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:56 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 22:42:56 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 22:42:56 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-07-25 22:42:56 -0700
+Served asset /fontawesome-webfont.woff - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-25 22:43:05 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 80ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-25 22:43:05 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 22:43:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 22:43:05 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:43:05 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-25 22:43:05 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-25 22:43:05 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-25 22:43:05 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-25 22:43:05 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 22:43:05 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-28 19:21:41 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 336ms (Views: 335.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-28 19:21:41 -0700
+Served asset /application.css - 200 OK (18ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-28 19:21:41 -0700
+Served asset /custom.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:42 -0700
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:42 -0700
+Served asset /custom.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:42 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 19:21:42 -0700
+Served asset /font-awesome.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:42 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:42 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:42 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:42 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:42 -0700
+Served asset /application.js - 200 OK (12ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2013-07-28 19:21:47 -0700
+Processing by FoldersController#index as HTML
+  [1m[36mFolder Load (0.1ms)[0m  [1mSELECT "folders".* FROM "folders" [0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT "folders".* FROM "folders" WHERE "folders"."soft_deleted" = 'f'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 1[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT "links".* FROM "links" WHERE "links"."folder_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 5 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 5 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 7 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 7 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 8 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 8 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 10 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 10 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 11 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 11 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 12 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 12 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 13 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 13 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 18 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 18 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 23 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 23 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 26 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 26 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 27 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 27 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 29 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 29 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 30 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 30 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 32 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 32 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 33 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 33 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 2[0m
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" WHERE "links"."folder_id" = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 17 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 24 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 38 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 3
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" WHERE "links"."folder_id" = 3[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 3 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 9 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 9 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 19 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 19 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 20 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 21 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 25 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 31 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 31 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 37 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 37 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "links" WHERE "links"."folder_id" = 4
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" WHERE "links"."folder_id" = 4[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 6 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 6 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 14 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 14 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 15 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 15 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 22 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 22 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 28 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 28 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 34 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 34 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 35 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 36 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 36 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  Rendered folders/index.html.erb within layouts/application (396.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 1440ms (Views: 407.2ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 19:21:48 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:48 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:48 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:48 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:48 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:48 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:48 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:48 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-07-28 19:21:48 -0700
+Served asset /fontawesome-webfont.woff - 304 Not Modified (10ms)
+
+
+Started GET "/links" for 127.0.0.1 at 2013-07-28 19:21:50 -0700
+Processing by LinksController#index as HTML
+  [1m[36mLink Load (0.5ms)[0m  [1mSELECT "links".* FROM "links" WHERE "links"."soft_deleted" = 'f'[0m
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links" 
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 38 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 37 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 36 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 35 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 34 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 32 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 31 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 29 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 28 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 25 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 23 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 22 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 21 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 20 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 19 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 18 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 17 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 16 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 15 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 14 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 13 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 12 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 11 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 8 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 7 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 5 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 4 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 2 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Link' AND (taggings.context = ('tags'))[0m
+  Rendered links/index.html.erb within layouts/application (21.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 619ms (Views: 47.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:51 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:51 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:51 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:51 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:51 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 19:21:51 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:51 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2013-07-28 19:21:57 -0700
+Processing by FoldersController#new as HTML
+  Rendered folders/_form.html.erb (8.4ms)
+  Rendered folders/new.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:57 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:57 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:57 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:57 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:57 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 19:21:57 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:57 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:57 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-28 19:21:57 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/links/new" for 127.0.0.1 at 2013-07-28 19:22:00 -0700
+Processing by LinksController#new as HTML
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" WHERE "folders"."soft_deleted" = 'f'
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" IS NULL AND "taggings"."taggable_type" = 'Link' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  Rendered links/_form.html.erb (11.9ms)
+  Rendered links/new.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 19:22:00 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:00 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:00 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:00 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:00 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:00 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-28 19:22:05 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2013-07-28 19:22:05 -0700
+Served asset /font-awesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.mixitup.min.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:05 -0700
+Served asset /jquery.mixitup.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:05 -0700
+Served asset /custom.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:05 -0700
+Served asset /jquery-1.9.1.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:05 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:05 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:05 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-07-28 19:22:05 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
