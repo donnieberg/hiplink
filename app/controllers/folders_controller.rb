@@ -43,7 +43,7 @@ class FoldersController < ApplicationController
   
     if @updated_folder
       flash[:success] = "Folder successfully updated."      
-      redirect_to '/folders' 
+      render :show
     else
       flash[:error] = "Error, please try editing folder again."        
       render :new      

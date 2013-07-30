@@ -1,5 +1,5 @@
 <div class="show">
-  <h1><%= @folder.name.capitalize %> Folder Links</h1>
+  <h1><%= @folder.name.capitalize %> Folder</h1>
   <h2><%= @folder.description %></h2>
   <div style="text-align:center;">
   <%= link_to 'Edit Folder', edit_folder_path %>  |  
@@ -74,5 +74,4 @@
     <% end %>
     </ul>
     <% end %>
-</div>
-<%= link_to "<< Back", :back %>   
+</div> 

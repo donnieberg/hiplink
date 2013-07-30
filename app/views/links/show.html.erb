@@ -1,10 +1,16 @@
-<h1>Your Link</h1>
+<h1>Link</h1>
 <div class="link_container">
   <div class="link_thumbnail">
     <img src='http://api.pagepeeker.com/v2/thumbs.php?size=m&code=59b97c1f70&url=<%= @link.link_url -%>'>
   </div> 
   <div class="link_details">
-    <p><span class="link_label">Posted by:</span> <%= @link.from %><br>
+  <div class="edit_delete_links">  
+  <%= link_to 'Edit Link', edit_link_path(@link.id), :method => :get %>   |   
+  <%= link_to 'Delete Link', link_path(@link.id), :method => :delete, :confirm => 'Are you sure?' %>   
+  </div>   
+    <p>
+    <span class="link_label">Folder:</span> <%= @link.folder.name %><br>  
+    <span class="link_label">Posted by:</span> <%= @link.from %><br>
     <span class="link_label">Date posted:</span> <%= @link.date %><br>
     <span class="link_label">Link:</span> <%= link_to @link.link_url, @link.link_url %><br>
     <% if !@link.tags.empty? %>  
@@ -18,10 +24,8 @@
           <% end %>
         </ul>    
        <% end %> 
-    </p>  
-  <%= link_to 'Edit Link', edit_link_path(@link.id), :method => :get %>   |   
-  <%= link_to 'Delete Link', link_path(@link.id), :method => :delete, :confirm => 'Are you sure?' %>     
+    </p>     
   </div>
 </div> 
-<%= link_to "<< Back", :back %>   
+ 
 
