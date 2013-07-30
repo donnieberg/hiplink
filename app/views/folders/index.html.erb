@@ -11,8 +11,9 @@
 
     <div class ="folder_content">
         <ul>
-          <% folder.links.reverse! %>
-          <% folder.links.each do |link| %>
+        <% folder.links.reverse! %> 
+        <% folder.links.each do |link| %>
+        <% if link.soft_deleted == false %>
           <li class="mix <%= @class_tags %>" data-date="<%= link.date %>">
             <div class="link_container">
             <div class="link_thumbnail">
@@ -44,7 +45,8 @@
               </div>
             </div>
           </li>
-          <% end %>
+        <% end %>
+        <% end %>
         </ul>
     </div>
 </div>   

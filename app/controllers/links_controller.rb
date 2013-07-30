@@ -1,8 +1,6 @@
 class LinksController < ApplicationController
   def index
-  # @folders = Folder.where soft_deleted: false
     Folder.create_folders!
-
     @links = Link.where soft_deleted: false
     Link.create_links! 
     @split_tag_array = []
@@ -21,9 +19,9 @@ class LinksController < ApplicationController
     @link = Link.new(params[:link])
     if @link.save
       flash[:success] = "Link successfully created."      
-      redirect_to '/links'
+      redirect_to '/folders'
     else
-      flash[:error] = "Error, please try creating link again. Links must have a folder and cannot be duplicated."       
+      flash[:error] = "Error, please try again. Links must be unique and have a folder."       
       render :new      
     end
   end
@@ -51,7 +49,7 @@ class LinksController < ApplicationController
   def destroy
     link = Link.find(params[:id])
     link.update_attribute(:soft_deleted, true)  
-    flash[:success] = "Link was deleted."    
-    redirect_to '/links'
+    flash[:success] = "Link was successfully deleted."    
+    redirect_to '/folders'
   end
 end

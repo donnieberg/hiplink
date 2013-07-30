@@ -19,6 +19,7 @@ class Folder < ActiveRecord::Base
 
     all_postings = message_history['messages']
     all_postings.delete_if {|post| post['message'][0] != '_' }
+    # all_postings.delete_if {|post| post['message'].match(" ").nil? }
 
     all_postings.each do |post|
       message = post['message']
