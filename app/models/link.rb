@@ -29,11 +29,12 @@ class Link < ActiveRecord::Base
       message_hash['underscore'] = message_array[0][1..-1]
       message_hash['link_url'] = message_array[1]
       posted_array = []
-      accepted_tags = %w[ruby rails javascript css events awesome tutorial]
+      accepted_tags = %w[#video #events #awesome #tutorial]
       message_array[2..-1].each do |tag|
-         posted_array << tag[1..-1]
+         posted_array << tag
       end
       tag_array = posted_array & accepted_tags
+      tag_array.map! { |x| x[1..-1] }
       message_hash['tags'] = tag_array
       post['message'] = message_hash
     end

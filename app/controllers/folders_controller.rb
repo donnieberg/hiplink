@@ -25,6 +25,7 @@ class FoldersController < ApplicationController
 
   def show
     @folder = Folder.find(params[:id])
+    @links = Link.where soft_deleted: false  
     @split_tag_array = []
     @folder.links.map(&:tags).flatten.uniq.each do |full_tag|
       full_tag[:name].split(" ").each do |split_tag| 
