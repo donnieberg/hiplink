@@ -1,10 +1,10 @@
 class LinksController < ApplicationController
   def index
-    @folders = Folder.where soft_deleted: false
+  # @folders = Folder.where soft_deleted: false
     Folder.create_folders!
 
-    @links = Link.where(soft_deleted: false).sort!.reverse { |a, b| a.date <=> b.date } 
-    Link.create_links!     
+    @links = Link.where(soft_deleted: false).sort!.reverse { |a, b| a.updated_at <=> b.updated_at } 
+    Link.create_links! 
     @split_tag_array = []
     @links.map(&:tags).flatten.uniq.each do |full_tag|
       full_tag[:name].split(" ").each do |split_tag| 
@@ -23,7 +23,7 @@ class LinksController < ApplicationController
       flash[:success] = "Link successfully created."      
       redirect_to '/links'
     else
-      flash[:error] = "Error, please try creating link again."       
+      flash[:error] = "Error, please try creating link again. Links must have a folder and cannot be duplicated."       
       render :new      
     end
   end

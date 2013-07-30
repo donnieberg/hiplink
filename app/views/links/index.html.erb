@@ -1,4 +1,4 @@
-<% @folders %>
+
 <h1>All Links</h1>
 <!-- FILTER CONTROLS -->   
 <div class="btn-group filter_dropdown"> 
@@ -41,7 +41,7 @@
         <%= link_to 'Delete Link', link_path(link.id), :method => :delete, :confirm => 'Are you sure?' %> 
       </div>        
         <p>
-        <span class="link_label">Folder:</span> <%= link.folder %><br>  
+        <span class="link_label">Folder:</span> <%= link.folder.name %><br>  
         <span class="link_label">Posted by:</span> <%= link.from %><br>
         <span class="link_label">Date posted:</span> <%= link.date %><br>
         <span class="link_label">Link:</span> <%= link_to link.link_url, link.link_url %><br>

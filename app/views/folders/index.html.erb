@@ -1,8 +1,8 @@
 <h1>All Folders</h1>
 
 <% @folders.each do |folder| %>
-<% @links %>
 <% if !folder.links.empty? %> 
+
 <div class="folder_container">
       <i class="icon-angle-right icon-2x"></i>
       <i class="icon-folder-close-alt icon-4x"></i>
@@ -11,6 +11,7 @@
 
     <div class ="folder_content">
         <ul>
+          <% folder.links.reverse! %>
           <% folder.links.each do |link| %>
           <li class="mix <%= @class_tags %>" data-date="<%= link.date %>">
             <div class="link_container">
@@ -23,7 +24,7 @@
                 <%= link_to 'Delete Link', link_path(link.id), :method => :delete, :confirm => 'Are you sure?' %> 
               </div>                          
               <p>
-                <span class="link_label">Folder:</span> <%= link.folder %><br> 
+                <span class="link_label">Folder:</span> <%= link.folder.name %><br> 
                 <span class="link_label">Posted by:</span> <%= link.from %><br>  
                 <span class="link_label">Date posted:</span> <%= link.date %><br>               
                 <span class="link_label">Link:</span> <%= link_to link.link_url, link.link_url %><br> 

@@ -8,7 +8,7 @@ class Link < ActiveRecord::Base
 
   validates :date, presence: true  
   validates :from, presence: true  
-  validates :link_url, presence: true #, uniqueness: { case_sensitive: false }  
+  validates :link_url, presence: true, uniqueness: { case_sensitive: false }  
 
   acts_as_taggable
   acts_as_taggable_on :tags
@@ -46,13 +46,15 @@ class Link < ActiveRecord::Base
       should_create_link = existing_links.none? {|l| l.link_url == post['message']['link_url'] }
       if should_create_link
         f = Folder.find_by_name(post['message']['underscore'])
-        new_link = Link.create
-        new_link.date = post['date']
-        new_link.from = post['from']['name']
-        new_link.link_url = post['message']['link_url']
-        new_link.folder_id = f.id  
-        new_link.tag_list = post['message']['tags']
-        new_link.save
+          if f
+            new_link = Link.create
+            new_link.date = post['date']
+            new_link.from = post['from']['name']
+            new_link.link_url = post['message']['link_url']
+            new_link.folder_id = f.id
+            new_link.tag_list = post['message']['tags']
+            new_link.save
+          end
       end 
     end    
   end     
