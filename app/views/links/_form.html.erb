@@ -1,4 +1,5 @@
 <!-- form for the @link which is Link.new in the new method in Controller  -->
+<div class="new_form">
 <%= form_for @link do |f| %>
     <%= f.label :folder_id %>
     <%= f.select :folder_id, Folder.where(soft_deleted: false).map { |folder| [folder.name, folder.id]}, :include_blank => true, :prompt => "Pick Folder" %>
@@ -17,3 +18,4 @@
     <br>   
     <%= f.submit nil, { :class => 'button' }  %>
 <% end %>
+</div>

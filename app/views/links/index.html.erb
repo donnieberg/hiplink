@@ -1,37 +1,12 @@
-
 <h1>All Links</h1>
-<!-- FILTER CONTROLS -->   
-<div class="btn-group filter_dropdown"> 
-  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-  Filter by Meta-Tag
-  <span class="caret"></span>
-  </a> 
-  <ul class="dropdown-menu">
-  <li class="filter active" data-filter="all"><a href="#">View All</a></li>          
-  <% @split_tag_array.uniq.each do |split_tag| %>
-    <li class="filter" data-filter="<%= split_tag -%>">
-      <a href="#"><%= split_tag %></a>
-    </li>
-  <% end %>
-  </ul>
-</div>
-
-<!-- SORT CONTROLS -->
-  
-<div class="controls">
-  <ul class="sort_menu">
-    <li class="sort" data-sort="data-date" data-order="asc"><a href="#">Newest to Oldest | </a></li>    
-    <li class="sort" data-sort="data-date" data-order="desc"><a href="#">Oldest to Newest</a></li>
-  </ul>
-</div>
-<hr/>
+<%= render 'layouts/filtercontrol' %>
 
 <!-- GRID -->
 <ul id="Grid">
   <% @links.reverse! %>
   <% @links.each do |link| %>
   <% class_tags = link.tags.map { |t| t[:name].split(" ") }.flatten %>
-  <li class="mix <%= class_tags.join(" ") %>" data-date="<%= link.date %>">
+  <li class="mix <%= class_tags.join(" ")-%> <%= link.from -%>" data-date="<%= link.date %>">
     <div class="link_container">
       <div class="link_thumbnail">
         <img src='http://api.pagepeeker.com/v2/thumbs.php?size=m&code=59b97c1f70&url=<%= link.link_url -%>'>

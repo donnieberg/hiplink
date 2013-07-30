@@ -1,0 +1,39 @@
+<!-- FILTER CONTROLS -->   
+<div class="btn-group filter_dropdown" style="margin-left:10px;"> 
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+  Filter by Meta-Tag
+  <span class="caret"></span>
+  </a> 
+  <ul class="dropdown-menu">
+  <li class="filter active" data-filter="all"><a href="#">View All</a></li>  
+  <% @split_tag_array.uniq.each do |split_tag| %>
+    <li class="filter" data-filter="<%= split_tag -%>">
+      <a href="#"><%= split_tag %></a>
+    </li>
+  <% end %>
+  </ul>
+</div>
+  
+<div class="btn-group filter_dropdown"> 
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+  Filter by Person
+  <span class="caret"></span>
+  </a> 
+  <ul class="dropdown-menu">
+    <li class="filter active" data-filter="all"><a href="#">View All</a></li>  
+    <% @links.each do |link| %>
+    <li class="filter" data-filter="<%= link.from -%>">
+      <a href="#"><%= link.from %></a>
+    </li>
+    <% end %>
+  </ul>
+</div>    
+<!-- SORT CONTROLS -->
+  
+<div class="controls">
+  <ul class="sort_menu">
+    <li class="sort" data-sort="data-date" data-order="asc"><a href="#">Newest to Oldest | </a></li>    
+    <li class="sort" data-sort="data-date" data-order="desc"><a href="#">Oldest to Newest</a></li>
+  </ul>
+</div>
+<hr/>

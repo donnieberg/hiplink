@@ -39,9 +39,9 @@ class FoldersController < ApplicationController
 
   def update
     @folder = Folder.find(params[:id])
-    @updated_folder = @folder.update_attributes(params[:folder])
+    updated_folder = @folder.update_attributes(params[:folder])
   
-    if @updated_folder
+    if updated_folder
       flash[:success] = "Folder successfully updated."      
       render :show
     else
