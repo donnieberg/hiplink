@@ -3,7 +3,7 @@ class FoldersController < ApplicationController
   def index  
     @folders = Folder.where(soft_deleted: false).sort! { |a, b| a.name <=> b.name }  
     Folder.create_folders!
-    @links = Link.where(soft_deleted: false).order(:updated_at).reverse
+    @links = Link.where soft_deleted: false  
     Link.create_links!      
   end
 

@@ -3,7 +3,7 @@ class LinksController < ApplicationController
   # @folders = Folder.where soft_deleted: false
     Folder.create_folders!
 
-    @links = Link.where(soft_deleted: false).sort!.reverse { |a, b| a.updated_at <=> b.updated_at } 
+    @links = Link.where soft_deleted: false
     Link.create_links! 
     @split_tag_array = []
     @links.map(&:tags).flatten.uniq.each do |full_tag|

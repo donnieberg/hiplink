@@ -28,6 +28,7 @@
 
 <!-- GRID -->
 <ul id="Grid">
+  <% @links.reverse! %>
   <% @links.each do |link| %>
   <% class_tags = link.tags.map { |t| t[:name].split(" ") }.flatten %>
   <li class="mix <%= class_tags.join(" ") %>" data-date="<%= link.date %>">
