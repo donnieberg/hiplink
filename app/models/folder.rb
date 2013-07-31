@@ -12,10 +12,10 @@ class Folder < ActiveRecord::Base
             uniqueness: { case_sensitive: false }
 
   def self.formatted_posts
-    hipchat_api = HipChat::API.new('1fc2ac7967316af15f9d93595ae4e6')
+    hipchat_api = HipChat::API.new('1da847ea86433056b28d93a85374bd')
 
     #room id, YYYY-MM-DD or 'recent' to get last 75 msg, timezone - june
-    message_history = hipchat_api.rooms_history(244599, 'recent', 'US/Pacific') 
+    message_history = hipchat_api.rooms_history(216909, 'recent', 'US/Pacific') 
 
     all_postings = message_history['messages']
     all_postings.delete_if {|post| post['message'][0] != '_' }
