@@ -21,9 +21,9 @@
   </a> 
   <ul class="dropdown-menu">
     <li class="filter active" data-filter="all"><a href="#">View All</a></li>  
-    <% @links.each do |link| %>
-    <li class="filter" data-filter="<%= link.from -%>">
-      <a href="#"><%= link.from %></a>
+    <% @person_array.each do |person| %>
+    <li class="filter" data-filter="<%= person -%>">
+      <a href="#"><%= person %></a>
     </li>
     <% end %>
   </ul>

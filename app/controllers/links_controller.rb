@@ -9,6 +9,12 @@ class LinksController < ApplicationController
         @split_tag_array << split_tag
       end
     end
+
+    @person_array = []
+    @links.each do |link|
+      @person_array << link.from
+    end
+    @person_array.uniq!
   end
 
   def new
