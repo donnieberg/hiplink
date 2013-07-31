@@ -6,6 +6,7 @@
   </a> 
   <ul class="dropdown-menu">
   <li class="filter active" data-filter="all"><a href="#">View All</a></li>  
+  <% @split_tag_array.sort! %>
   <% @split_tag_array.uniq.each do |split_tag| %>
     <li class="filter" data-filter="<%= split_tag -%>">
       <a href="#"><%= split_tag %></a>
@@ -21,6 +22,7 @@
   </a> 
   <ul class="dropdown-menu">
     <li class="filter active" data-filter="all"><a href="#">View All</a></li>  
+    <% @person_array.sort! %>
     <% @person_array.each do |person| %>
     <li class="filter" data-filter="<%= person -%>">
       <a href="#"><%= person %></a>

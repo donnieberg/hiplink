@@ -2,7 +2,6 @@ require 'hipchat-api'
 
 class Link < ActiveRecord::Base
   attr_accessible :date, :from, :link_url, :folder_id, :tag_list
-  before_save { |link| link.link_url = link_url.downcase }
 
   belongs_to :folder
 
