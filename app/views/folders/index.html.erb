@@ -28,7 +28,7 @@
               <span class="link_label">Folder:</span> <%= link.folder.name %><br> 
               <span class="link_label">Posted by:</span> <%= link.from %><br>  
               <span class="link_label">Date posted:</span> <%= link.date %><br>               
-              <span class="link_label">Link:</span> <%= link_to link.link_url, link.link_url %><br> 
+              <span class="link_label">Link:</span> <%= link_to link.link_url, link.link_url, :target => "_blank"  %><br> 
               <% if !link.tags.empty? %>                  
                <ul class="tags_list">
                   <li><span class="link_label">Tags:</span></li>          
