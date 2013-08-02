@@ -19,7 +19,7 @@ class Link < ActiveRecord::Base
     message_history = hipchat_api.rooms_history(216909, 'recent', 'US/Pacific') 
 
     all_postings = message_history['messages']
-    all_postings.delete_if {|post| post['message'][0] != '_' }
+    all_postings.delete_if {|post| post['message'][0] != '/' }
 
     all_postings.each do |post|
       message = post['message']
