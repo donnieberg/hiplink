@@ -5,9 +5,9 @@ class Link < ActiveRecord::Base
 
   belongs_to :folder
 
-  validates :date, presence: true  
-  validates :from, presence: true  
-  validates :link_url, presence: true, uniqueness: { case_sensitive: false }  
+  validates :date, presence: true
+  validates :from, presence: true
+  validates :link_url, presence: true, uniqueness: { case_sensitive: false }
 
   acts_as_taggable
   acts_as_taggable_on :tags
@@ -16,10 +16,10 @@ class Link < ActiveRecord::Base
     hipchat_api = HipChat::API.new('1da847ea86433056b28d93a85374bd')
 
     #room id, YYYY-MM-DD or 'recent' to get last 75 msg, timezone - june
-    message_history = hipchat_api.rooms_history(216909, 'recent', 'US/Pacific') 
+    message_history = hipchat_api.rooms_history(216909, '2013-07-31', 'US/Pacific')
 
     all_postings = message_history['messages']
-    all_postings.delete_if {|post| post['message'][0] != '/' }
+    all_postings.delete_if {|post| post['message'][0] != '_' }
 
     all_postings.each do |post|
       message = post['message']
@@ -55,7 +55,7 @@ class Link < ActiveRecord::Base
             new_link.tag_list = post['message']['tags']
             new_link.save
           end
-      end 
-    end    
-  end     
+      end
+    end
+  end
 end
