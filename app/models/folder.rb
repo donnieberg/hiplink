@@ -15,7 +15,7 @@ class Folder < ActiveRecord::Base
     hipchat_api = HipChat::API.new('1da847ea86433056b28d93a85374bd')
 
     #room id, YYYY-MM-DD or 'recent' to get last 75 msg, timezone - june
-    message_history = hipchat_api.rooms_history(216909, 'recent', 'US/Pacific')
+    message_history = hipchat_api.rooms_history(216909, Time.now.strftime("%Y-%m-%d"), 'US/Pacific')
 
     all_postings = message_history['messages']
     all_postings.delete_if {|post| post['message'][0] != '/' }
