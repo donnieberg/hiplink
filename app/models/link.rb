@@ -13,13 +13,13 @@ class Link < ActiveRecord::Base
   acts_as_taggable_on :tags
 
   def self.formatted_posts
-    hipchat_api = HipChat::API.new('1da847ea86433056b28d93a85374bd')
+    hipchat_api = HipChat::API.new('1fc2ac7967316af15f9d93595ae4e6')
 
     #room id, YYYY-MM-DD or 'recent' to get last 75 msg, timezone - june
-    message_history = hipchat_api.rooms_history(216909, Time.now.strftime("%Y-%m-%d"), 'US/Pacific')
+    message_history = hipchat_api.rooms_history(237908, Time.now.strftime("%Y-%m-%d"), 'US/Pacific')
 
     all_postings = message_history['messages']
-    all_postings.delete_if {|post| post['message'][0] != '/' }
+    all_postings.delete_if {|post| post['message'][0] != '/' || !(post['message'].match('/code')).nil? || !(post['message'].match('//')).nil? }
 
     all_postings.each do |post|
       message = post['message']
@@ -28,7 +28,7 @@ class Link < ActiveRecord::Base
       message_hash['underscore'] = message_array[0][1..-1]
       message_hash['link_url'] = message_array[1]
       posted_array = []
-      accepted_tags = %w[#testing #git #video #rake #cheat_sheet #angular #coffeescript #nodejs]
+      accepted_tags = %w[#testing #git #video #rake #cheat_sheet #angular #coffeescript #node]
       message_array[2..-1].each do |tag|
          posted_array << tag
       end
