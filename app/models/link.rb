@@ -16,7 +16,7 @@ class Link < ActiveRecord::Base
     hipchat_api = HipChat::API.new('1fc2ac7967316af15f9d93595ae4e6')
 
     #room id, YYYY-MM-DD or 'recent' to get last 75 msg, timezone - june
-    message_history = hipchat_api.rooms_history(237908, Time.now.strftime("%Y-%m-%d"), 'US/Pacific')
+    message_history = hipchat_api.rooms_history(237908, 'recent', 'US/Pacific')
 
     all_postings = message_history['messages']
     all_postings.delete_if {|post| post['message'][0] != '/' || !(post['message'].match('/code')).nil? || !(post['message'].match('//')).nil? }
