@@ -17,7 +17,7 @@ class Folder < ActiveRecord::Base
     message_history = hipchat_api.rooms_history(216909, 'recent', 'US/Pacific')
 
     all_postings = message_history['messages']
-    all_postings.delete_if {|post| post['message'][0] != '/' } #|| !(post['message'].match('/code')).nil? || !(post['message'].match('//')).nil? }
+    all_postings.delete_if {|post| post['message'][0] != '/' || !(post['message'].match('/code')).nil? || !(post['message'].match('//')).nil? }
 
     all_postings.each do |post|
       message = post['message']
