@@ -33,6 +33,9 @@ GEM
     annotate (2.5.0)
       rake
     arel (3.0.2)
+    better_errors (0.9.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
     bootstrap-sass (2.1.0.0)
     builder (3.0.4)
     capybara (1.1.2)
@@ -164,6 +167,7 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on
   annotate (= 2.5.0)
+  better_errors
   bootstrap-sass (= 2.1)
   capybara (= 1.1.2)
   coffee-rails (~> 3.2.1)

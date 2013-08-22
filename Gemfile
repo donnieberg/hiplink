@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '2.1'
-gem 'hipchat-api' 
+gem 'hipchat-api'
 gem 'acts-as-taggable-on'
 gem 'pry'
 gem 'pry-rails'
@@ -14,7 +14,8 @@ gem "font-awesome-rails"
 group :development, :test do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'
-  gem 'annotate', '2.5.0'  
+  gem 'annotate', '2.5.0'
+  gem 'better_errors'
 end
 
 group :test do

@@ -13,17 +13,18 @@ class Link < ActiveRecord::Base
   acts_as_taggable_on :tags
 
   def self.formatted_posts
-    hipchat_api = HipChat::API.new('1fc2ac7967316af15f9d93595ae4e6')
+    hipchat_api = HipChat::API.new('3b66cd25f1fdd374768bdbf79c8230')
 
     #room id, YYYY-MM-DD or 'recent' to get last 75 msg, timezone - june
-    message_history = hipchat_api.rooms_history(237908, 'recent', 'US/Pacific')
+    message_history = hipchat_api.rooms_history(216909, 'recent', 'US/Pacific')
 
     all_postings = message_history['messages']
-    all_postings.delete_if {|post| post['message'][0] != '/' || !(post['message'].match('/code')).nil? || !(post['message'].match('//')).nil? }
+    all_postings.delete_if {|post| post['message'][0] != '/' } #|| !(post['message'].match('/code')).nil? || !(post['message'].match('//')).nil? }
 
     all_postings.each do |post|
       message = post['message']
       message_array = message.split(" ")
+      next if message_array.length < 2
       message_hash = {}
       message_hash['underscore'] = message_array[0][1..-1]
       message_hash['link_url'] = message_array[1]
