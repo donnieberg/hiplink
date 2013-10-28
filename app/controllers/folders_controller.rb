@@ -1,11 +1,8 @@
 class FoldersController < ApplicationController
-  
-  def index  
-    @folders = Folder.where(soft_deleted: false).sort! { |a, b| a.name <=> b.name }  
-    Folder.create_folders!
 
-    @links = Link.where soft_deleted: false  
-    Link.create_links!      
+  def index
+    @folders = Folder.where(soft_deleted: false).sort! { |a, b| a.name <=> b.name }
+    @links = Link.where soft_deleted: false
   end
 
   def new
@@ -18,17 +15,17 @@ class FoldersController < ApplicationController
       flash[:success] = "Folder successfully created. It only appears in the Folder list if it contains links."
       redirect_to '/folders'
     else
-      flash[:error] = "Error, please try creating a folder again."   
-      render :new    
-    end 
+      flash[:error] = "Error, please try creating a folder again."
+      render :new
+    end
   end
 
   def show
     @folder = Folder.find(params[:id])
-    @links = Link.where soft_deleted: false  
+    @links = Link.where soft_deleted: false
     @split_tag_array = []
     @folder.links.map(&:tags).flatten.uniq.each do |full_tag|
-      full_tag[:name].split(" ").each do |split_tag| 
+      full_tag[:name].split(" ").each do |split_tag|
         @split_tag_array << split_tag
       end
     end
@@ -37,33 +34,33 @@ class FoldersController < ApplicationController
     @links.each do |link|
       @person_array << link.from
     end
-    @person_array.uniq!    
+    @person_array.uniq!
   end
 
   def edit
-    @folder = Folder.find(params[:id])    
+    @folder = Folder.find(params[:id])
   end
 
   def update
     @folder = Folder.find(params[:id])
     updated_folder = @folder.update_attributes(params[:folder])
-  
+
     if updated_folder
-      flash[:success] = "Folder successfully updated."      
+      flash[:success] = "Folder successfully updated."
       render :show
     else
-      flash[:error] = "Error, please try editing folder again."        
-      render :new      
-    end  
+      flash[:error] = "Error, please try editing folder again."
+      render :new
+    end
   end
 
   def destroy
     @folder = Folder.find(params[:id])
-    @folder.update_attribute(:soft_deleted, true ) 
+    @folder.update_attribute(:soft_deleted, true )
     @folder.links.each do |link|
       link.update_attribute(:soft_deleted, true)
-    end  
-    flash[:success] = "Folder was successfully deleted."  
+    end
+    flash[:success] = "Folder was successfully deleted."
     redirect_to '/folders'
   end
 end
