@@ -2,6 +2,7 @@ HipchatOrganizer::Application.routes.draw do
   root :to => "home#index"
   get '/about' => 'home#about'
 
+  resources :rooms
   resources :folders
   resources :links
   resources :tags    

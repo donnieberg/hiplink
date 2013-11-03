@@ -1,7 +1,7 @@
 <h1>All Folders</h1>
 
 <% @folders.each do |folder| %>
-<% if !folder.links.empty? %> 
+<% if !folder.links.empty? %>
 
 <div class="folder_container">
   <i class="icon-angle-right icon-2x"></i>
@@ -11,7 +11,7 @@
 
     <div class ="folder_content">
       <ul>
-        <% folder.links.reverse! %> 
+        <% folder.links.reverse! %>
         <% folder.links.each do |link| %>
         <% if link.soft_deleted == false %>
           <li class="mix <%= @class_tags %>" data-date="<%= link.date %>">
@@ -19,19 +19,19 @@
               <div class="link_thumbnail">
                 <img src='http://api.pagepeeker.com/v2/thumbs.php?size=m&code=59b97c1f70&url=<%= link.link_url -%>'>
               </div>
-              <div class="link_details"> 
+              <div class="link_details">
               <div class="edit_delete_links">
-                <%= link_to 'Edit Link', edit_link_path(link.id), :method => :get %>   |   
-                <%= link_to 'Delete Link', link_path(link.id), :method => :delete, :confirm => 'Are you sure?' %> 
-              </div>                          
+                <%= link_to 'Edit Link', edit_link_path(link.id), :method => :get %>   |
+                <%= link_to 'Delete Link', link_path(link.id), :method => :delete, :confirm => 'Are you sure?' %>
+              </div>
               <p>
-              <span class="link_label">Folder:</span> <%= link.folder.name %><br> 
-              <span class="link_label">Posted by:</span> <%= link.from %><br>  
-              <span class="link_label">Date posted:</span> <%= link.date %><br>               
-              <span class="link_label">Link:</span> <%= link_to link.link_url, link.link_url, :target => "_blank"  %><br> 
-              <% if !link.tags.empty? %>                  
+              <span class="link_label">Folder:</span> <%= link.folder.name %><br>
+              <span class="link_label">Posted by:</span> <%= link.from %><br>
+              <span class="link_label">Date posted:</span> <%= link.date %><br>
+              <span class="link_label">Link:</span> <%= link_to link.link_url, link.link_url, :target => "_blank"  %><br>
+              <% if !link.tags.empty? %>
                <ul class="tags_list">
-                  <li><span class="link_label">Tags:</span></li>          
+                  <li><span class="link_label">Tags:</span></li>
                     <% link.tags.each do |tag| %>
                     <% @class_tags = tag %>
                       <% tag_array = tag[:name].split(" ") %>
@@ -39,9 +39,9 @@
                         <li class="<%= tag_item %>"><%= tag_item %></li>
                       <% end %>
                     <% end %>
-                </ul>  
-              <% end %>  
-              </p>         
+                </ul>
+              <% end %>
+              </p>
               </div>
             </div>
           </li>
@@ -49,7 +49,7 @@
         <% end %>
       </ul>
     </div>
-</div>   
+</div>
 <% end %>
 <% end %>
 

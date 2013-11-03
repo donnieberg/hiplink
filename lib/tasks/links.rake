@@ -44,16 +44,17 @@ desc "load in new links and folders from hipchat for various rooms"
 			existing_folders = Folder.all
 			formatted_posts(roomId).each do |post|
 				should_create_folder = existing_folders.none? { |f| f.name == post['message']['forward_slash'] }
-				find(roomId).folders.build(name: post['message']['forward_slash'], description: "new folder") if should_create_folder
+				folder = find(roomId).folders.build(name: post['message']['forward_slash'], description: "new folder") if should_create_folder
+				folder.save
 			end
 		end
 
 
 		def create_links(roomId)
-			existing_links = Link.all
+			# existing_links = Link.all
 			formatted_posts(roomId).each do |post|
-				should_create_link = existing_links.none? {|l| l.link_url == post['message']['link_url'] }
-				if should_create_link
+				# should_create_link = existing_links.none? {|l| l.link_url == post['message']['link_url'] }
+				# if should_create_link
 					f = Folder.find_by_name(post['message']['forward_slash'])
 					if f
 						new_link = Link.create
@@ -64,29 +65,30 @@ desc "load in new links and folders from hipchat for various rooms"
 						new_link.tag_list = post['message']['tags']
 						new_link.save
 					end
-				end
+				#end
 			end
 		end
+
 
 # Hipchat Test Room
 	create_folders(244599)
 	create_links(244599)
 
-# WDI SF Sept - Social
-	create_folders(295105)
-	create_links(295105)
+# # WDI SF Sept - Social
+# 	create_folders(295105)
+# 	create_links(295105)
 
-# WDI SF Sept - Snakes
-	create_folders(289202)
-	create_links(289202)
+# # WDI SF Sept - Snakes
+# 	create_folders(289202)
+# 	create_links(289202)
 
-# WDI SF Sept - Camels
-	create_folders(289203)
-	create_links(289203)
+# # WDI SF Sept - Camels
+# 	create_folders(289203)
+# 	create_links(289203)
 
-# WDI SF Sept Instructors
-	create_folders(289873)
-	create_links(289873)
+# # WDI SF Sept Instructors
+# 	create_folders(289873)
+# 	create_links(289873)
 
 	end
 end

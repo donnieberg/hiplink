@@ -1,9 +1,5 @@
 class RoomsController < ApplicationController
 
-def index
-  @rooms = Room.all
-end  
-
 def new
   @room = Room.new
 end
@@ -17,6 +13,11 @@ def create
     flash[:danger] = "not created"
     render :new
   end
+end
+
+def show
+  @room = Room.find(params[:id])
+  @folders = @room.folders
 end
 
 end
