@@ -11,17 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130716191344) do
+ActiveRecord::Schema.define(:version => 20131102232912) do
 
   create_table "folders", :force => true do |t|
     t.string   "name"
     t.text     "description"
+    t.integer  "room_id"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
     t.boolean  "soft_deleted", :default => false
   end
-
-  add_index "folders", ["name"], :name => "index_folders_on_name", :unique => true
 
   create_table "links", :force => true do |t|
     t.date     "date"
@@ -31,6 +30,14 @@ ActiveRecord::Schema.define(:version => 20130716191344) do
     t.datetime "updated_at",                      :null => false
     t.integer  "folder_id"
     t.boolean  "soft_deleted", :default => false
+  end
+
+  create_table "rooms", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "room_token_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "taggings", :force => true do |t|

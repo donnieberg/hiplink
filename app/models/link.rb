@@ -7,7 +7,7 @@ class Link < ActiveRecord::Base
 
   validates :date, presence: true
   validates :from, presence: true
-  validates :link_url, presence: true, uniqueness: { case_sensitive: false }
+  validates :link_url, presence: true
 
   acts_as_taggable
   acts_as_taggable_on :tags

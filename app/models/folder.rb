@@ -1,13 +1,9 @@
-require 'hipchat-api'
-
 class Folder < ActiveRecord::Base
-  attr_accessible :name, :description
+  attr_accessible :name, :description, :room_id
   before_save { |folder| folder.name = name.downcase }
 
+  belongs_to :room
   has_many :links, dependent: :destroy
   has_many :tags, through: :links
-
-  validates :name, presence: true,
-            uniqueness: { case_sensitive: false }
 
 end
