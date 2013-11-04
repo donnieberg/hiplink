@@ -18,7 +18,6 @@ desc "load in new links and folders from hipchat for various rooms"
 			all_postings.delete_if {|post| post['message'][0] != '/' }
 
 			if all_postings.length > 0
-
 				all_postings.select! do |post|
 					message = post['message']
 					message_array = message.split(" ")
@@ -59,8 +58,7 @@ desc "load in new links and folders from hipchat for various rooms"
 			formatted_posts(roomId).each do |post|
 				should_create_folder = existing_folders.none? { |f| f.name == post['message']['forward_slash'] }
 				if should_create_folder
-			    folder = Folder.new(name: post['message']['forward_slash'], description: "new folder", room_id: find(roomId).id)
-			    folder.save
+			    Folder.create(name: post['message']['forward_slash'], description: "new folder", room_id: find(roomId).id)
 				end
 			end
 		end
