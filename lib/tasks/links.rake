@@ -5,9 +5,9 @@ desc "load in new links and folders from hipchat for various rooms"
 		puts "hello, load_links task is starting"
 
 		def formatted_posts(roomId)
-			hipchat_api = HipChat::API.new('1fc2ac7967316af15f9d93595ae4e6')
+			#hipchat_api = HipChat::API.new('1fc2ac7967316af15f9d93595ae4e6')
 			#GA's Rooms
-			#hipchat_api = HipChat::API.new('3b66cd25f1fdd374768bdbf79c8230')
+			hipchat_api = HipChat::API.new('3b66cd25f1fdd374768bdbf79c8230')
 
 			#room id, YYYY-MM-DD or 'recent' to get last 75 msg, timezone - june
 			today = Time.now.strftime("%Y-%m-%d")
@@ -64,17 +64,18 @@ desc "load in new links and folders from hipchat for various rooms"
 		end
 
 		def create_links(roomId)
+			existing_folders = find(roomId).folders
 			# existing_links = Link.all
 			formatted_posts(roomId).each do |post|
 				# should_create_link = existing_links.none? {|l| l.link_url == post['message']['link_url'] }
 				# if should_create_link
-					f = Folder.find_by_name(post['message']['forward_slash'])
+					f = existing_folders.select {|folder| folder.name == post['message']['forward_slash']}
 					if f
 						new_link = Link.create
 						new_link.date = post['date']
 						new_link.from = post['from']['name']
 						new_link.link_url = post['message']['link_url']
-						new_link.folder_id = f.id
+						new_link.folder_id = f[0].id
 						new_link.tag_list = post['message']['tags']
 						new_link.save
 					end
@@ -83,34 +84,34 @@ desc "load in new links and folders from hipchat for various rooms"
 		end
 
 # Hipchat Test Room
- 	if !formatted_posts(244599).nil? && formatted_posts(244599).length > 0
-	  create_folders(244599)
-	  create_links(244599)
-	end
+# 	if !formatted_posts(244599).nil? && formatted_posts(244599).length > 0
+#	  create_folders(244599)
+#	  create_links(244599)
+#	end
 
 # # WDI SF Sept - Social
-#  	if !formatted_posts(295105).nil? && formatted_posts(295105).length > 0
-# 	  create_folders(295105)
-#  	  create_links(295105)
-# 	end
+  	if !formatted_posts(295105).nil? && formatted_posts(295105).length > 0
+ 	  create_folders(295105)
+  	  create_links(295105)
+ 	end
 
 # # WDI SF Sept - Snakes
-#   	if !formatted_posts(289202).nil?  && formatted_posts(289202).length > 0
-#  	  create_folders(289202)
-#  	  create_links(289202)
-# 	end
+   	if !formatted_posts(289202).nil?  && formatted_posts(289202).length > 0
+  	  create_folders(289202)
+  	  create_links(289202)
+ 	end
 
 # # WDI SF Sept - Camels
-#   	if !formatted_posts(289203).nil?  && formatted_posts(289203).length > 0
-#  	  create_folders(289203)
-#  	  create_links(289203)
-# 	end
+   	if !formatted_posts(289203).nil?  && formatted_posts(289203).length > 0
+  	  create_folders(289203)
+  	  create_links(289203)
+ 	end
 
 # # WDI SF Sept Instructors
-#   	if !formatted_posts(289873).nil?  && formatted_posts(289873).length > 0
-#  	  create_folders(289873)
-#  	  create_links(289873)
-# 	end
+   	if !formatted_posts(289873).nil?  && formatted_posts(289873).length > 0
+  	  create_folders(289873)
+  	  create_links(289873)
+ 	end
 
 	end
 end
