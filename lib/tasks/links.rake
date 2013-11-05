@@ -10,7 +10,8 @@ desc "load in new links and folders from hipchat for various rooms"
 			hipchat_api = HipChat::API.new('3b66cd25f1fdd374768bdbf79c8230')
 
 			#room id, YYYY-MM-DD or 'recent' to get last 75 msg, timezone - june
-			today = Time.now.strftime("%Y-%m-%d")
+			#today = Time.now.strftime("%Y-%m-%d")
+      today = "2013-11-04"
 			message_history = hipchat_api.rooms_history(roomId, today, 'US/Pacific')
 
 			all_postings = message_history['messages']
