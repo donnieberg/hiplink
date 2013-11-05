@@ -2,6 +2,7 @@
   <h1>HIPLINK</h1>
   <h2>Autogenerates Folders to Organize Links Posted in HipChat</h2>
 
+  <span class="folder_header"><span class="star">&#9733;</span></span>
   <% @rooms.each do |room| %>
   <button class="button">
     <%= link_to room.name, room_path(room.id) %>

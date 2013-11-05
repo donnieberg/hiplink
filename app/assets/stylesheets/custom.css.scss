@@ -116,7 +116,7 @@ ul {
 
 nav li {
   text-transform:uppercase;
-  font-weight:600; 
+  font-weight:600;
 }
 
 a {
@@ -124,7 +124,7 @@ a {
 }
 
 a:hover {
-  color:#ccc;  
+  color:#ccc;
   text-decoration:none;
 }
 /*-----------HOMEPAGE-----------*/
@@ -159,15 +159,15 @@ a:hover {
     border-bottom: 1px #FFF solid;
   }
   .folder_content {
-    display:none; 
+    display:none;
   }
   .show h1 {
     font-size:4em;
     margin:50px 0 20px 0;
   }
   .show h2 {
-    font-size: 2em;  
-    margin-bottom: 10px;  
+    font-size: 2em;
+    margin-bottom: 10px;
   }
   .new_header {
   float:left;
@@ -175,7 +175,7 @@ a:hover {
   height:500px;
   border-right:1px #fff solid;
   padding:20px 50px 0 0;
-  margin-right:100px;  
+  margin-right:100px;
   }
   .new_header h1 {
   text-align:left;
@@ -186,7 +186,7 @@ a:hover {
   .folder_form {
     padding:40px 0 100px 0;
   }
-  
+
 
 /*--------FOR LINKS---------*/
 .tags_list li,
@@ -197,7 +197,7 @@ a:hover {
 .link_container {
   margin:20px 0;
   padding: 20px;
-  border-bottom:1px #FFF solid;  
+  border-bottom:1px #FFF solid;
 }
 li:last-child .link_container {
   border:none;
@@ -208,10 +208,10 @@ li:last-child .link_container {
   margin-right:10px;
 }
 .link_details:after {
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
    clear: both;
 }
 .link_label {
@@ -248,6 +248,7 @@ li:last-child .link_container {
   position: relative;
   top: -5px;
   margin-top: 20px;
+  width: 150px;
 }
 .button:hover {
   background-color: #4e68c7;

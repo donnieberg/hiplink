@@ -1,3 +1,5 @@
+require 'hipchat-api'
+
 namespace :load do
 desc "load in new links and folders from hipchat for various rooms"
 
