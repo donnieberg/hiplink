@@ -17,7 +17,7 @@ desc "load in new links and folders from hipchat for various rooms"
 
 			all_postings = message_history['messages']
 			if !all_postings.nil?
-			all_postings.delete_if {|post| post['message'][0] != '/' }
+			all_postings.delete_if {|post| post['message'][0] != '_' }
 
 			if all_postings.length > 0
 				all_postings.select! do |post|
